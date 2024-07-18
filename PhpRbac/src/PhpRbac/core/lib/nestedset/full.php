@@ -221,11 +221,12 @@ class FullNestedSet extends BaseNestedSet implements ExtendedNestedSet
      * @param boolean $AbsoluteDepths to return Depth of sub-tree from zero or absolutely from the whole tree
      * @param string $Condition
      * @param string $Rest optional, rest of variables to fill in placeholders of condition string, one variable for each ? in condition
-	 * @return Rowset including Depth field
-	 * @seealso children
+     * @return Rowset including Depth field
+     * @seealso children
      */
-    function descendantsConditional($ConditionString,$Rest=null,$AbsoluteDepths=false)
+    function descendantsConditional($ConditionString,$AbsoluteDepths=false,$Rest=null)
     {
+        $DepthConcat = "";
         if (!$AbsoluteDepths)
             $DepthConcat="- (sub_tree.innerDepth )";
         $Arguments=func_get_args();
