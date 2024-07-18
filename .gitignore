@@ -1,9 +1,12 @@
 .settings
 .buildpath
 .project
+.idea
 *bak*
 *draft*
 *phprbac.sqlite3*
 *Doxygen*
 *phpdoc*
 index.php
+vendor
+/composer.lock
